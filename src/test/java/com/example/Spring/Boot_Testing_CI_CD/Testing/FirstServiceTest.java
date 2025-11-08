@@ -36,7 +36,7 @@ class FirstServiceTest {
 
     @Test
     @DisplayName("Testing User is Present or Not")
-    void findUser() {
+    void getaUser() {
 
         Mockito.when(firstRepo.findUser("Gokul")).thenReturn("Gokul");
 
@@ -62,6 +62,10 @@ class FirstServiceTest {
         String result = firstService.welcomeMessage(name);
 
         System.out.println(result);
+
+    }
+
+    void newmethod(){
 
     }
 }
