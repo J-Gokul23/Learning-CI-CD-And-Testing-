@@ -11,7 +11,7 @@ public class FirstController {
 
     @GetMapping("/message")
     public String firstMessage() {
-        return "Welcome this is my First Message from the Application:";
+        return "New Welcome this is my First Message from the Application:";
     }
 
     @GetMapping("/second")
