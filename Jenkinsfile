@@ -1,12 +1,16 @@
 pipeline {
     agent any
     stages {
-
         stage('Checkout') {
             steps {
                 echo 'Cloning repository...'
-                git branch: 'main', url: 'https://github.com/YourUsername/YourRepo.git'
+                git branch: 'main', url: 'https://github.com/J-Gokul23/Learning-CI-CD-And-Testing-.git'
             }
+        }
+        stage ('Testing'){
+        steps {
+          bat 'mvn test'
+        }
         }
         stage('Build with Maven') {
             steps {
