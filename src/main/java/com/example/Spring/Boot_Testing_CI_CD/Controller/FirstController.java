@@ -18,4 +18,8 @@ public class FirstController {
     public String secondMessage() {
         return "Welcome Gokul Nath";
     }
+    @GetMapping("/web")
+    public String webMessage() {
+        return "New Welcome this is my First Message from the Application:";
+    }
 }

@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    environment {
+    IMAGE_NAME=spring-ci-cd
+    }
+   
     stages {
         stage('Checkout') {
             steps {
@@ -21,7 +25,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo 'Building Docker image...'
-                bat 'docker build -t spring-ci-cd:latest .'
+                bat 'docker build -t %IMAGE_NAME%:latest .'
             }
         }
         stage('Stop Old Container (if any)') {
@@ -36,7 +40,7 @@ pipeline {
         stage('Run Docker Container') {
             steps {
                 echo 'Running new container...'
-                bat 'docker run -d -p 8081:8081 --name spring-ci-cd-container spring-ci-cd:latest'
+                bat 'docker run -d -p 8081:8081 --name spring-ci-cd-container %IMAGE_NAME%:latest'
             }
         }
     }
