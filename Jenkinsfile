@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-    IMAGE_NAME=spring-ci-cd
+    IMAGE_NAME='spring-ci-cd'
     }
    
     stages {
