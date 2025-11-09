@@ -10,7 +10,12 @@ public class FirstController {
 
 
     @GetMapping("/message")
-    public String firstMessage(){
+    public String firstMessage() {
         return "Welcome this is my First Message from the Application:";
+    }
+
+    @GetMapping("/second")
+    public String secondMessage() {
+        return "Welcome Gokul Nath";
     }
 }
