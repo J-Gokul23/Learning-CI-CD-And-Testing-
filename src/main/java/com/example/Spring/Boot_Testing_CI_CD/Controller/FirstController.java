@@ -30,5 +30,10 @@ public class FirstController {
         return "New Welcome this is my First Message from the Application:";
     }
 
+    @GetMapping("/web3")
+    public String webMessage3() {
+        return "New Welcome Web3";
+    }
+
 
 }
