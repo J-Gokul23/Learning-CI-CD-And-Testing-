@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class FirstController {
 
-
     @GetMapping("/message")
     public String firstMessage() {
         return "New Welcome this is my First Message from the Application:";
@@ -24,7 +23,6 @@ public class FirstController {
         return "New Welcome this is my First Message from the Application:";
     }
 
-
     @GetMapping("/web1")
     public String webMessage2() {
         return "New Welcome this is my First Message from the Application:";
@@ -34,6 +32,11 @@ public class FirstController {
     public String webMessage3() {
         return "New Welcome Web3";
     }
+
+
+
+
+
 
 
 }
